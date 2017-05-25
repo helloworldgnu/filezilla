@@ -1,0 +1,83 @@
+#! /bin/sh
+
+FILEZILLA_LINGUAS="@FILEZILLA_LINGUAS@"
+PACKAGE_VERSION="@PACKAGE_VERSION@"
+top_builddir="@top_builddir@"
+top_srcdir="@top_srcdir@"
+
+# Creates a zip file with the Win32 binaries
+
+if [ -e "win32zip" ]; then
+  echo "Target directory already exists"
+  exit 1
+fi
+
+install_prefix=$1
+if [ -z "$install_prefix" ]; then
+  echo "Install prefix not given"
+  exit 1
+elif ! [ -d "$install_prefix" ]; then
+  echo "Install prefix does not exist"
+  exit 1
+fi
+
+targetdir="win32zip/FileZilla-$PACKAGE_VERSION"
+mkdir -p "$targetdir" || exit 1
+
+echo Copying executables
+
+# 2-3 parameters:
+# $1: relative path to top build dir, no leading nor trailing slashes
+# $2: executable name
+# $3: optional target name
+copy_libtool()
+{
+  local target
+
+  if [ "$3" = "" ]; then
+    target="$2"
+  else
+    target="$3"
+  fi
+
+  if [ -x "$top_builddir/$1/.libs/$2" ]; then
+    cp "$top_builddir/$1/.libs/$2" "$targetdir/$target" || exit 1
+  else
+    cp "$top_builddir/$1/$2" "$targetdir/$target" || exit 1
+  fi
+}
+
+
+copy_libtool "src/interface" "filezilla.exe"
+copy_libtool "src/putty" "fzsftp.exe"
+copy_libtool "src/putty" "fzputtygen.exe"
+copy_libtool "src/fzshellext/32" "libfzshellext-0.dll" "fzshellext.dll"
+copy_libtool "src/fzshellext/64" "libfzshellext-0.dll" "fzshellext_64.dll"
+
+echo Copying locales
+
+mkdir -p $targetdir/locales || exit 1
+for i in $FILEZILLA_LINGUAS; do
+
+  mkdir -p "$targetdir/locales/$i" || exit 1
+
+  cp "$top_builddir/locales/$i.mo" "$targetdir/locales/$i/filezilla.mo" || exit 1
+done
+
+echo Copying resources
+cp -r "$install_prefix/share/filezilla/resources" "$targetdir/resources" || exit 1
+
+echo Copy docs
+mkdir -p "$targetdir/docs"
+cp "$top_srcdir/docs/fzdefaults.xml.example" "$targetdir/docs" || exit 1
+
+echo Copying other files
+cp "$top_srcdir/GPL.html" "$targetdir" || exit 1
+cp "$top_srcdir/AUTHORS" "$targetdir" || exit 1
+cp "$top_srcdir/NEWS" "$targetdir" || exit 1
+
+cd win32zip
+zip -r -9 ../FileZilla.zip "FileZilla-$PACKAGE_VERSION" || exit 1
+cd ..
+
+rm -rf win32zip

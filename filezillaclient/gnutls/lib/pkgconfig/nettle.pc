@@ -1,0 +1,11 @@
+prefix=/home/nmav/cvs/gnutls/win32/win32
+exec_prefix=${prefix}
+libdir=/home/nmav/cvs/gnutls/win32/win32/lib
+includedir=/home/nmav/cvs/gnutls/win32/win32/include
+
+Name: Nettle
+Description: Nettle low-level cryptographic library (symmetric algorithms)
+URL: http://www.lysator.liu.se/~nisse/nettle
+Version: 2.7.1
+Libs: -L${libdir} -lnettle
+Cflags: -I${includedir}

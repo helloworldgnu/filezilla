@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FileZilla 3 Icon set specification</title>
+<style>
+    h1 { text-align: center; }
+    h2, h3 { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>FileZilla 3 Icon set specification</h1>
+
+<h2>Introduction</h2>
+
+<p>This document describes the requirements for icon sets in FileZilla 3.</p>
+
+<p>
+  Please remember that if you want to create an icon set for FileZilla,
+  that you should be available to update the icon set in the future when
+  additional icon are added to the requirements. Otherwise the default icons
+  will be used for the missing icons and eventually your theme will be removed
+  once it becomes too outdated.
+</p>
+
+<h2>Requirements</h2>
+<p>
+  Since FileZilla is Free Software, the same has to apply to all artwork used
+  in FileZilla. This means that all artwork has to be published under the GPL
+  or a GPL compatible license.
+  Note that the Creative Commons Attribution license is <a href="http://www.gnu.org/licenses/license-list.html">not compatible</a> with the GPL.
+</p>
+
+<h3>Icon sizes</h3>
+
+<p>
+  To improve accessibility of the software, the icons should be available in
+  different sizes. Despite a few exception (see below), there are no restrictions regarding the icon size.
+</p>
+<p>
+  The most commonly sizes used for icons are:
+</p>
+<ul>
+  <li>16x16 (the default icon size used by FileZilla)</li>
+  <li>32x32</li>
+  <li>48x48</li>
+</ul>
+
+<p>
+  The following icons <strong>have</strong> to be available in 16x16 in addition to the other sizes supported by the theme. See further below for a description what these icons represent.
+</p>
+<ul>
+  <li>ascii.png</li>
+  <li>auto.png</li>
+  <li>binary.png</li>
+  <li>file.png</li>
+  <li>folder.png</li>
+  <li>folderclosed.png</li>
+  <li>download.png</li>
+  <li>downloadadd.png</li>
+  <li>lock.png</li>
+  <li>upload.png</li>
+  <li>uploadadd.png</li>
+  <li>server.png</li>
+  <li>symlink.png</li>
+</ul>
+
+<p>
+  The following icons <strong>have</strong> to be available in 32x32:
+</p>
+<ul>
+  <li>file.png</li>
+</ul>
+
+<p>It is important, that the icons are good-looking in all those sizes. Especially the smallest icon size should not look blurred</p>
+
+<h3>Color depth</h3>
+
+<p>
+  Regarding the used color-depth there is no limitation.
+</p>
+
+<h3>File format</h3>
+
+<p>
+  As file format for the icons, the png format has to be used. For each
+  provided size there has to be a subdirectory with the size as name
+  ("16x16" for example) containing all icons in the corresponding size.
+</p>
+
+<p>
+  In addition to the files for the different sizes, each icon should be
+  available in a vector based format (e.g. SVG) as well, so that differently sized icons can
+  be generated quickly.
+</p>
+
+<p>
+  Each icon set should follow a theme, the icons should match nicely. Also,
+  the function of the icon has to be easily recognizable.
+</p>
+
+<h2>Required icons</h2>
+
+<p>
+  The following icons together with the required file name are required in all
+  icon sets for FileZilla:
+</p>
+
+<p><strong>General toolbar:</strong></p>
+<ul>
+  <li>sitemanager.png - Sitemanager</li>
+  <li>localtreeview.png, remotetreeview.png, logview.png, queueview.png
+    - Togglebuttons for the local folder tree, for the remote folder tree,
+      the message log, and the transfer queue.</li>
+  <li>refresh.png - a refresh button</li>
+  <li>
+    processqueue.png - a button that starts/stops transfer queue processing
+  </li>
+  <li>
+    cancel.png, disconnect.png, reconnect.png - cancel, disconnect and
+    reconnect buttons
+  </li>
+  <li>help.png - a help button</li>
+</ul>
+
+<p><strong>Browsing toolbar:</strong></p>
+<ul>
+  <li>
+    synchronize.png - Synchronize folder views (if you change the local dir,
+    remote dir will be changes as well)
+  </li>
+  <li>
+    compare.png - Compare local and remote directories (file entries in the
+    file lists will receive a coloured background if they exist either only on
+    the local or remote side, or when the file attributes differ.)
+  </li>
+  <li>showhidden.png - show hidden files</li>
+  <li>filter.png - filter filenames. Note: Funnels are not filters.</li>
+  <li>find.png - search for files</li>
+</ul>
+
+<p><strong>Transfer settings toolbar:</strong></p>
+<ul>
+  <li>speedlimits.png - Button to enable speed limits</li>
+</ul>
+
+<p><strong>Context menus</strong></p>
+<ul>
+  <li>upload.png - Upload selected local files</li>
+  <li>uploadadd.png - Add selected local files to queue</li>
+  <li>download.png - Download selected remote files</li>
+  <li>downloadadd.png - Add selected remote files to queue</li>
+</ul>
+
+<p><strong>Other generic icons:</strong></p>
+<ul>
+  <li>
+    ascii.png, auto.png, binary.png - Transfermode icons for Ascii, binary
+    and Auto mode.
+  </li>
+  <li>bookmark.png - Bookmarks/Favourites</li>
+  <li>bookmark.png - Individual Bookmark/Favourite</li>
+  <li>folderup.png - "Go up one folder"</li>
+  <li>folderback.png - "Go back to previous folder"</li>
+  <li>file.png - icon for generic files</li>
+  <li>folder.png - icon for open folder/directory</li>
+  <li>folderclosed.png - icon for a closed folder/directory</li>
+  <li>lock.png - used in status bar to indicate encrypted connections</li>
+  <li>server.png - server icon for the site entries in the Site Manager</li>
+  <li>symlink.png - overlay icon used in file lists to indicate that the displayed item represents a symbolic link</li>
+</ul>
+
+</body>
+</html>

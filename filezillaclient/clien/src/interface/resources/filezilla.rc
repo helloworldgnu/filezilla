@@ -1,0 +1,17 @@
+//{{NO_DEPENDENCIES}}
+
+#define wxUSE_NO_MANIFEST 1
+#ifdef GNU_WINDRES
+1 24 "windows_manifest.xml"
+#endif
+
+appicon ICON "FileZilla.ico"
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include <wx/msw/wx.rc>
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+#ifdef HAS_VERSIONRC
+#include "version.rc"
+#endif

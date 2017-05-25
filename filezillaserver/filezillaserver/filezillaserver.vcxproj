@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{38538B57-5034-4AF0-882D-E9BC19DD06FE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>filezillaserver</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\thirdinclude\;..\thirdinclude\zlib-1.2.10\;$(IncludePath)</IncludePath>
+    <OutDir>../bin/</OutDir>
+    <LibraryPath>../thirdlib/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>../.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Accounts.cpp" />
+    <ClCompile Include="..\AdminInterface.cpp" />
+    <ClCompile Include="..\AdminListenSocket.cpp" />
+    <ClCompile Include="..\AdminSocket.cpp" />
+    <ClCompile Include="..\AsyncSocketEx.cpp" />
+    <ClCompile Include="..\AsyncSocketExLayer.cpp" />
+    <ClCompile Include="..\AsyncSslSocketLayer.cpp" />
+    <ClCompile Include="..\autobanmanager.cpp" />
+    <ClCompile Include="..\ControlSocket.cpp" />
+    <ClCompile Include="..\conversion.cpp" />
+    <ClCompile Include="..\ExternalIpCheck.cpp" />
+    <ClCompile Include="..\FileLogger.cpp" />
+    <ClCompile Include="..\hash_thread.cpp" />
+    <ClCompile Include="..\iputils.cpp" />
+    <ClCompile Include="..\ListenSocket.cpp" />
+    <ClCompile Include="..\MFC64bitFix.cpp" />
+    <ClCompile Include="..\misc\dll.cpp" />
+    <ClCompile Include="..\misc\md5.cpp" />
+    <ClCompile Include="..\Options.cpp" />
+    <ClCompile Include="..\pasv_port_randomizer.cpp" />
+    <ClCompile Include="..\Permissions.cpp" />
+    <ClCompile Include="..\Server.cpp" />
+    <ClCompile Include="..\ServerThread.cpp" />
+    <ClCompile Include="..\Service.cpp" />
+    <ClCompile Include="..\SpeedLimit.cpp" />
+    <ClCompile Include="..\StdAfx.cpp" />
+    <ClCompile Include="..\Thread.cpp" />
+    <ClCompile Include="..\tinyxml\tinystr.cpp" />
+    <ClCompile Include="..\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="..\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="..\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="..\TransferSocket.cpp" />
+    <ClCompile Include="..\version.cpp" />
+    <ClCompile Include="..\xml_utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Accounts.h" />
+    <ClInclude Include="..\AdminInterface.h" />
+    <ClInclude Include="..\AdminListenSocket.h" />
+    <ClInclude Include="..\AdminSocket.h" />
+    <ClInclude Include="..\AsyncSocketEx.h" />
+    <ClInclude Include="..\AsyncSocketExLayer.h" />
+    <ClInclude Include="..\AsyncSslSocketLayer.h" />
+    <ClInclude Include="..\autobanmanager.h" />
+    <ClInclude Include="..\config.h" />
+    <ClInclude Include="..\ControlSocket.h" />
+    <ClInclude Include="..\conversion.h" />
+    <ClInclude Include="..\defs.h" />
+    <ClInclude Include="..\ExternalIpCheck.h" />
+    <ClInclude Include="..\FileLogger.h" />
+    <ClInclude Include="..\hash_thread.h" />
+    <ClInclude Include="..\iputils.h" />
+    <ClInclude Include="..\ListenSocket.h" />
+    <ClInclude Include="..\MFC64bitFix.h" />
+    <ClInclude Include="..\misc\dll.h" />
+    <ClInclude Include="..\misc\md5.h" />
+    <ClInclude Include="..\misc\StdString.h" />
+    <ClInclude Include="..\OptionLimits.h" />
+    <ClInclude Include="..\Options.h" />
+    <ClInclude Include="..\OptionTypes.h" />
+    <ClInclude Include="..\pasv_port_randomizer.h" />
+    <ClInclude Include="..\Permissions.h" />
+    <ClInclude Include="..\platform.h" />
+    <ClInclude Include="..\resource.h" />
+    <ClInclude Include="..\Server.h" />
+    <ClInclude Include="..\ServerThread.h" />
+    <ClInclude Include="..\SpeedLimit.h" />
+    <ClInclude Include="..\StdAfx.h" />
+    <ClInclude Include="..\Thread.h" />
+    <ClInclude Include="..\tinyxml\tinystr.h" />
+    <ClInclude Include="..\tinyxml\tinyxml.h" />
+    <ClInclude Include="..\TransferSocket.h" />
+    <ClInclude Include="..\version.h" />
+    <ClInclude Include="..\xml_utils.h" />
+  </ItemGroup>
+</Project>

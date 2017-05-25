@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>FileZilla</ProjectName>
+    <ProjectGuid>{760BA430-BB7F-44AB-9542-F8705CAFF92B}</ProjectGuid>
+    <RootNamespace>FileZilla</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="..\Dependencies.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="..\Dependencies.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\..\wxWidgets-3.0.2\include;..\..\..\gnutls\include;..\..\..\sqlite-amalgamation-3080803;..\..\..\zlib\include;..\..\..\wxWidgets-3.0.2\include\msvc\wx;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\filezilla-filezillserver-vs2013-master\wxWidgets-3.0.2\lib;F:\filezilla-filezillserver-vs2013-master\zlib\lib;F:\filezilla-filezillserver-vs2013-master\gnutls\bin;F:\filezilla-filezillserver-vs2013-master\sqlite-amalgamation-3080803;F:\filezilla-filezillserver-vs2013-master\wxWidgets-3.0.2\lib\vc_lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/FileZilla.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;../include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;PACKAGE_VERSION="3.8.0-rc3";USED_HOST="i686-w64-mingw32";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>filezilla.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/filezilla.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0407</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>libgnutls-28.lib;normaliz.lib;odbc32.lib;odbccp32.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;..\engine\Debug\engine.lib;Netapi32.lib;Winmm.lib;Ws2_32.lib;mpr.lib;sqlite3.lib;powrprof.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Debug/FileZilla_dbg.pdb</ProgramDatabaseFile>
+      <OutputFile>..\bin\filezilla.exe</OutputFile>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Manifest>
+      <AdditionalManifestFiles>
+      </AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/FileZilla.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>.;../include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;PACKAGE_VERSION="3.0.1";USED_HOST="i586-pc-mingw32msvc";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile>FileZilla.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/FileZilla.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0407</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>libgnutls-28.lib;normaliz.lib;wsock32.lib;odbc32.lib;odbccp32.lib;comctl32.lib;Netapi32.lib;Winmm.lib;Ws2_32.lib;mpr.lib;sqlite3.lib;powrprof.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Release/FileZilla.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OutputFile>..\bin\FileZilla.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aboutdialog.cpp" />
+    <ClCompile Include="asksavepassworddialog.cpp" />
+    <ClCompile Include="asyncrequestqueue.cpp" />
+    <ClCompile Include="aui_notebook_ex.cpp" />
+    <ClCompile Include="auto_ascii_files.cpp" />
+    <ClCompile Include="bookmarks_dialog.cpp" />
+    <ClCompile Include="buildinfo.cpp" />
+    <ClCompile Include="chmoddialog.cpp" />
+    <ClCompile Include="clearprivatedata.cpp" />
+    <ClCompile Include="cmdline.cpp" />
+    <ClCompile Include="commandqueue.cpp" />
+    <ClCompile Include="conditionaldialog.cpp" />
+    <ClCompile Include="context_control.cpp" />
+    <ClCompile Include="customheightlistctrl.cpp" />
+    <ClCompile Include="defaultfileexistsdlg.cpp" />
+    <ClCompile Include="dialogex.cpp" />
+    <ClCompile Include="dndobjects.cpp" />
+    <ClCompile Include="dragdropmanager.cpp" />
+    <ClCompile Include="drop_target_ex.cpp" />
+    <ClCompile Include="edithandler.cpp" />
+    <ClCompile Include="export.cpp" />
+    <ClCompile Include="fileexistsdlg.cpp" />
+    <ClCompile Include="filelist_statusbar.cpp" />
+    <ClCompile Include="filelistctrl.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="FileZilla.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="file_utils.cpp" />
+    <ClCompile Include="filter.cpp" />
+    <ClCompile Include="filter_conditions_dialog.cpp" />
+    <ClCompile Include="filteredit.cpp" />
+    <ClCompile Include="import.cpp" />
+    <ClCompile Include="inputdialog.cpp" />
+    <ClCompile Include="ipcmutex.cpp" />
+    <ClCompile Include="led.cpp" />
+    <ClCompile Include="listctrlex.cpp" />
+    <ClCompile Include="listingcomparison.cpp" />
+    <ClCompile Include="locale_initializer.cpp" />
+    <ClCompile Include="LocalListView.cpp" />
+    <ClCompile Include="LocalTreeView.cpp" />
+    <ClCompile Include="loginmanager.cpp" />
+    <ClCompile Include="Mainfrm.cpp" />
+    <ClCompile Include="manual_transfer.cpp" />
+    <ClCompile Include="menu_bar.cpp" />
+    <ClCompile Include="netconfwizard.cpp" />
+    <ClCompile Include="Options.cpp" />
+    <ClCompile Include="settings\optionspage.cpp" />
+    <ClCompile Include="settings\optionspage_connection.cpp" />
+    <ClCompile Include="settings\optionspage_connection_active.cpp" />
+    <ClCompile Include="settings\optionspage_connection_ftp.cpp" />
+    <ClCompile Include="settings\optionspage_connection_passive.cpp" />
+    <ClCompile Include="settings\optionspage_connection_sftp.cpp" />
+    <ClCompile Include="settings\optionspage_dateformatting.cpp" />
+    <ClCompile Include="settings\optionspage_debug.cpp" />
+    <ClCompile Include="settings\optionspage_edit.cpp" />
+    <ClCompile Include="settings\optionspage_edit_associations.cpp" />
+    <ClCompile Include="settings\optionspage_fileexists.cpp" />
+    <ClCompile Include="settings\optionspage_filelists.cpp" />
+    <ClCompile Include="settings\optionspage_filetype.cpp" />
+    <ClCompile Include="settings\optionspage_ftpproxy.cpp" />
+    <ClCompile Include="settings\optionspage_interface.cpp" />
+    <ClCompile Include="settings\optionspage_language.cpp" />
+    <ClCompile Include="settings\optionspage_logging.cpp" />
+    <ClCompile Include="settings\optionspage_proxy.cpp" />
+    <ClCompile Include="settings\optionspage_sizeformatting.cpp" />
+    <ClCompile Include="settings\optionspage_themes.cpp" />
+    <ClCompile Include="settings\optionspage_transfer.cpp" />
+    <ClCompile Include="settings\optionspage_updatecheck.cpp" />
+    <ClCompile Include="power_management.cpp" />
+    <ClCompile Include="queue.cpp" />
+    <ClCompile Include="queue_storage.cpp" />
+    <ClCompile Include="QueueView.cpp" />
+    <ClCompile Include="queueview_failed.cpp" />
+    <ClCompile Include="queueview_successful.cpp" />
+    <ClCompile Include="quickconnectbar.cpp" />
+    <ClCompile Include="recentserverlist.cpp" />
+    <ClCompile Include="recursive_operation.cpp" />
+    <ClCompile Include="RemoteListView.cpp" />
+    <ClCompile Include="RemoteTreeView.cpp" />
+    <ClCompile Include="search.cpp" />
+    <ClCompile Include="settings\settingsdialog.cpp" />
+    <ClCompile Include="sftp_crypt_info_dlg.cpp" />
+    <ClCompile Include="sitemanager.cpp" />
+    <ClCompile Include="sitemanager_dialog.cpp" />
+    <ClCompile Include="sizeformatting.cpp" />
+    <ClCompile Include="speedlimits_dialog.cpp" />
+    <ClCompile Include="splitter.cpp" />
+    <ClCompile Include="state.cpp" />
+    <ClCompile Include="statusbar.cpp" />
+    <ClCompile Include="statuslinectrl.cpp" />
+    <ClCompile Include="StatusView.cpp" />
+    <ClCompile Include="systemimagelist.cpp" />
+    <ClCompile Include="textctrlex.cpp" />
+    <ClCompile Include="themeprovider.cpp" />
+    <ClCompile Include="timeformatting.cpp" />
+    <ClCompile Include="toolbar.cpp" />
+    <ClCompile Include="treectrlex.cpp" />
+    <ClCompile Include="updater.cpp" />
+    <ClCompile Include="update_dialog.cpp" />
+    <ClCompile Include="verifycertdialog.cpp" />
+    <ClCompile Include="verifyhostkeydialog.cpp" />
+    <ClCompile Include="view.cpp" />
+    <ClCompile Include="viewheader.cpp" />
+    <ClCompile Include="volume_enumerator.cpp" />
+    <ClCompile Include="welcome_dialog.cpp" />
+    <ClCompile Include="window_state_manager.cpp" />
+    <ClCompile Include="wrapengine.cpp" />
+    <ClCompile Include="xh_text_ex.cpp" />
+    <ClCompile Include="xh_toolb_ex.cpp" />
+    <ClCompile Include="xmlfunctions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="asksavepassworddialog.h" />
+    <ClInclude Include="auto_ascii_files.h" />
+    <ClInclude Include="aboutdialog.h" />
+    <ClInclude Include="asyncrequestqueue.h" />
+    <ClInclude Include="aui_notebook_ex.h" />
+    <ClInclude Include="bookmarks_dialog.h" />
+    <ClInclude Include="buildinfo.h" />
+    <ClInclude Include="chmoddialog.h" />
+    <ClInclude Include="clearprivatedata.h" />
+    <ClInclude Include="cmdline.h" />
+    <ClInclude Include="commandqueue.h" />
+    <ClInclude Include="conditionaldialog.h" />
+    <ClInclude Include="context_control.h" />
+    <ClInclude Include="customheightlistctrl.h" />
+    <ClInclude Include="defaultfileexistsdlg.h" />
+    <ClInclude Include="dialogex.h" />
+    <ClInclude Include="dndobjects.h" />
+    <ClInclude Include="dragdropmanager.h" />
+    <ClInclude Include="drop_target_ex.h" />
+    <ClInclude Include="edithandler.h" />
+    <ClInclude Include="export.h" />
+    <ClInclude Include="fileexistsdlg.h" />
+    <ClInclude Include="filelist_statusbar.h" />
+    <ClInclude Include="filelistctrl.h" />
+    <ClInclude Include="filezillaapp.h" />
+    <ClInclude Include="file_utils.h" />
+    <ClInclude Include="filter.h" />
+    <ClInclude Include="filter_conditions_dialog.h" />
+    <ClInclude Include="filteredit.h" />
+    <ClInclude Include="import.h" />
+    <ClInclude Include="inputdialog.h" />
+    <ClInclude Include="ipcmutex.h" />
+    <ClInclude Include="led.h" />
+    <ClInclude Include="listctrlex.h" />
+    <ClInclude Include="listingcomparison.h" />
+    <ClInclude Include="locale_initializer.h" />
+    <ClInclude Include="LocalListView.h" />
+    <ClInclude Include="LocalTreeView.h" />
+    <ClInclude Include="loginmanager.h" />
+    <ClInclude Include="Mainfrm.h" />
+    <ClInclude Include="manual_transfer.h" />
+    <ClInclude Include="menu_bar.h" />
+    <ClInclude Include="netconfwizard.h" />
+    <ClInclude Include="Options.h" />
+    <ClInclude Include="settings\optionspage.h" />
+    <ClInclude Include="settings\optionspage_connection.h" />
+    <ClInclude Include="settings\optionspage_connection_active.h" />
+    <ClInclude Include="settings\optionspage_connection_ftp.h" />
+    <ClInclude Include="settings\optionspage_connection_passive.h" />
+    <ClInclude Include="settings\optionspage_connection_sftp.h" />
+    <ClInclude Include="settings\optionspage_dateformatting.h" />
+    <ClInclude Include="settings\optionspage_debug.h" />
+    <ClInclude Include="settings\optionspage_edit.h" />
+    <ClInclude Include="settings\optionspage_edit_associations.h" />
+    <ClInclude Include="settings\optionspage_fileexists.h" />
+    <ClInclude Include="settings\optionspage_filelists.h" />
+    <ClInclude Include="settings\optionspage_filetype.h" />
+    <ClInclude Include="settings\optionspage_ftpproxy.h" />
+    <ClInclude Include="settings\optionspage_interface.h" />
+    <ClInclude Include="settings\optionspage_language.h" />
+    <ClInclude Include="settings\optionspage_logging.h" />
+    <ClInclude Include="settings\optionspage_proxy.h" />
+    <ClInclude Include="settings\optionspage_sizeformatting.h" />
+    <ClInclude Include="settings\optionspage_themes.h" />
+    <ClInclude Include="settings\optionspage_transfer.h" />
+    <ClInclude Include="settings\optionspage_updatecheck.h" />
+    <ClInclude Include="power_management.h" />
+    <ClInclude Include="queue.h" />
+    <ClInclude Include="queue_storage.h" />
+    <ClInclude Include="QueueView.h" />
+    <ClInclude Include="queueview_failed.h" />
+    <ClInclude Include="queueview_successful.h" />
+    <ClInclude Include="quickconnectbar.h" />
+    <ClInclude Include="recentserverlist.h" />
+    <ClInclude Include="recursive_operation.h" />
+    <ClInclude Include="RemoteListView.h" />
+    <ClInclude Include="RemoteTreeView.h" />
+    <ClInclude Include="search.h" />
+    <ClInclude Include="settings\settingsdialog.h" />
+    <ClInclude Include="sftp_crypt_info_dlg.h" />
+    <ClInclude Include="sitemanager.h" />
+    <ClInclude Include="sitemanager_dialog.h" />
+    <ClInclude Include="sizeformatting.h" />
+    <ClInclude Include="speedlimits_dialog.h" />
+    <ClInclude Include="splitter.h" />
+    <ClInclude Include="state.h" />
+    <ClInclude Include="statusbar.h" />
+    <ClInclude Include="statuslinectrl.h" />
+    <ClInclude Include="StatusView.h" />
+    <ClInclude Include="systemimagelist.h" />
+    <ClInclude Include="textctrlex.h" />
+    <ClInclude Include="themeprovider.h" />
+    <ClInclude Include="timeformatting.h" />
+    <ClInclude Include="toolbar.h" />
+    <ClInclude Include="treectrlex.h" />
+    <ClInclude Include="updater.h" />
+    <ClInclude Include="update_dialog.h" />
+    <ClInclude Include="verifycertdialog.h" />
+    <ClInclude Include="verifyhostkeydialog.h" />
+    <ClInclude Include="view.h" />
+    <ClInclude Include="viewheader.h" />
+    <ClInclude Include="volume_enumerator.h" />
+    <ClInclude Include="welcome_dialog.h" />
+    <ClInclude Include="window_state_manager.h" />
+    <ClInclude Include="wrapengine.h" />
+    <ClInclude Include="xh_text_ex.h" />
+    <ClInclude Include="xmlfunctions.h" />
+    <ClInclude Include="xrc_helper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\FileZilla.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\filezilla.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\engine\engine.vcxproj">
+      <Project>{aad2642d-d07a-4415-bb32-d678d89d546f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tinyxml\tinyxml.vcxproj">
+      <Project>{593a4fb1-1787-4192-bf73-9c43bf8fc142}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

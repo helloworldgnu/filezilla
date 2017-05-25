@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{1c7c18d8-9d7f-439e-be08-592ecc3606b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\misc">
+      <UniqueIdentifier>{60f99ee5-746f-495e-942c-94456453dd56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tinyxml">
+      <UniqueIdentifier>{3470aa45-1dc0-4e2d-8d91-4b580b6fdc9c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Server.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\StdAfx.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Accounts.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AdminInterface.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AdminListenSocket.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AdminSocket.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AsyncSocketEx.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AsyncSocketExLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AsyncSslSocketLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\autobanmanager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ControlSocket.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\conversion.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalIpCheck.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FileLogger.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hash_thread.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iputils.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ListenSocket.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MFC64bitFix.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Options.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pasv_port_randomizer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Permissions.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerThread.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Service.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SpeedLimit.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Thread.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TransferSocket.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\version.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\xml_utils.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\misc\dll.cpp">
+      <Filter>source\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\misc\md5.cpp">
+      <Filter>source\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinystr.cpp">
+      <Filter>source\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinyxml.cpp">
+      <Filter>source\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinyxmlerror.cpp">
+      <Filter>source\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinyxmlparser.cpp">
+      <Filter>source\tinyxml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Server.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\StdAfx.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Accounts.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AdminInterface.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AdminListenSocket.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AdminSocket.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AsyncSocketEx.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AsyncSocketExLayer.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AsyncSslSocketLayer.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\autobanmanager.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\config.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ControlSocket.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\conversion.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\defs.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalIpCheck.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FileLogger.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hash_thread.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iputils.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ListenSocket.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFC64bitFix.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OptionLimits.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Options.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OptionTypes.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pasv_port_randomizer.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Permissions.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\resource.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerThread.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SpeedLimit.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Thread.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TransferSocket.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\version.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\xml_utils.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\misc\dll.h">
+      <Filter>source\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\misc\md5.h">
+      <Filter>source\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\misc\StdString.h">
+      <Filter>source\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tinyxml\tinystr.h">
+      <Filter>source\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tinyxml\tinyxml.h">
+      <Filter>source\tinyxml</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

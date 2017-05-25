@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{ffe6a5df-1a5f-4a21-b73d-a2d2566ca6d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\misc">
+      <UniqueIdentifier>{4b79a4ed-e144-42a8-bdfa-62375ed1822c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tinyxml">
+      <UniqueIdentifier>{92941b63-cafe-4b0f-b184-de13a26c45c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\interface">
+      <UniqueIdentifier>{a96d402a-da82-41b3-8534-b72cab762826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\interface\misc">
+      <UniqueIdentifier>{5ec38e6f-49f8-41a2-b165-ee95c84eaccb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tinyxml\tinystr.cpp">
+      <Filter>source\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinyxml.cpp">
+      <Filter>source\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinyxmlerror.cpp">
+      <Filter>source\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinyxmlparser.cpp">
+      <Filter>source\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Accounts.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AdminListenSocket.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AsyncSocketEx.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AsyncSocketExLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AsyncSslSocketLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\autobanmanager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\conversion.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalIpCheck.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hash_thread.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iputils.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pasv_port_randomizer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SpeedLimit.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Thread.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\version.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\xml_utils.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\misc\dll.cpp">
+      <Filter>source\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\misc\md5.cpp">
+      <Filter>source\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\ConnectDialog.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\DeleteGroupInUseDlg.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\EnterSomething.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\FileZilla server.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\GenerateCertificateDlg.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\GroupsDlg.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\GroupsDlgGeneral.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\GroupsDlgIpFilter.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\GroupsDlgSharedFolders.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\GroupsDlgSpeedLimit.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\MainFrm.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\NewUserDlg.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OfflineAskDlg.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsAdminInterfacePage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsAutobanPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsCompressionPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsDlg.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsGeneralIpbindingsPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsGeneralPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsGeneralWelcomemessagePage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsIpFilterPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsLoggingPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsMiscPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsPasvPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsSecurityPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsSpeedLimitPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OptionsSslPage.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\OutputFormat.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\SpeedLimitRuleDlg.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\splitex.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\StatusCtrl.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\StatusView.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\StdAfx.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\UsersDlg.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\UsersDlgGeneral.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\UsersDlgIpFilter.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\UsersDlgSharedFolders.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\UsersDlgSpeedLimit.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\UsersListCtrl.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\UsersView.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\misc\BrowseForFolder.cpp">
+      <Filter>source\interface\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\misc\HyperLink.cpp">
+      <Filter>source\interface\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\misc\Led.cpp">
+      <Filter>source\interface\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\misc\SAPrefsDialog.cpp">
+      <Filter>source\interface\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\misc\SAPrefsStatic.cpp">
+      <Filter>source\interface\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\misc\SAPrefsSubDlg.cpp">
+      <Filter>source\interface\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\misc\SBDestination.cpp">
+      <Filter>source\interface\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\misc\SystemTray.cpp">
+      <Filter>source\interface\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\AdminSocket.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\Options.cpp">
+      <Filter>source\interface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\tinyxml\tinystr.h">
+      <Filter>source\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tinyxml\tinyxml.h">
+      <Filter>source\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Accounts.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AdminListenSocket.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AsyncSocketEx.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AsyncSocketExLayer.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AsyncSslSocketLayer.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\autobanmanager.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\config.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\conversion.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\defs.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalIpCheck.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hash_thread.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iputils.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFC64bitFix.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OptionLimits.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OptionTypes.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pasv_port_randomizer.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SpeedLimit.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Thread.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\version.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\xml_utils.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\misc\dll.h">
+      <Filter>source\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\misc\md5.h">
+      <Filter>source\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\misc\StdString.h">
+      <Filter>source\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\ConnectDialog.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\DeleteGroupInUseDlg.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\EnterSomething.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\FileZilla server.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\GenerateCertificateDlg.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\GroupsDlg.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\GroupsDlgGeneral.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\GroupsDlgIpFilter.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\GroupsDlgSharedFolders.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\GroupsDlgSpeedLimit.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\MainFrm.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\NewUserDlg.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OfflineAskDlg.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsAdminInterfacePage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsAutobanPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsCompressionPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsDlg.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsGeneralIpbindingsPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsGeneralPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsGeneralWelcomemessagePage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsIpFilterPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsLoggingPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsMiscPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsPasvPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsSecurityPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsSpeedLimitPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OptionsSslPage.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\OutputFormat.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\resource.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\SpeedLimitRuleDlg.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\splitex.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\StatusCtrl.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\StatusView.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\StdAfx.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\UsersDlg.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\UsersDlgGeneral.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\UsersDlgIpFilter.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\UsersDlgSharedFolders.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\UsersDlgSpeedLimit.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\UsersListCtrl.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\UsersView.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\misc\BrowseForFolder.h">
+      <Filter>source\interface\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\misc\hyperlink.h">
+      <Filter>source\interface\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\misc\Led.h">
+      <Filter>source\interface\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\misc\SAPrefsDialog.h">
+      <Filter>source\interface\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\misc\SAPrefsStatic.h">
+      <Filter>source\interface\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\misc\SAPrefsSubDlg.h">
+      <Filter>source\interface\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\misc\SBDestination.h">
+      <Filter>source\interface\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\misc\SystemTray.h">
+      <Filter>source\interface\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\AdminSocket.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\Options.h">
+      <Filter>source\interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Dependencies.props.example">
+      <Filter>source</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\interface\FileZilla server.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\interface\res\userlisttoolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\leds.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\donate.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\transfer_modes.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\FileZilla server.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\empty.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\home.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\green.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\red.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\yellow.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\unknown.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\down.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\up.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\interface\res\certificate.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\interface\res\manifest.xml" />
+  </ItemGroup>
+</Project>

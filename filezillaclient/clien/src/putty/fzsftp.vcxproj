@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C1551B3B-DCC0-41F3-9C8E-455566F93EB8}</ProjectGuid>
+    <RootNamespace>fzsftp</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WINDOWS;NO_GSSAPI;SECURITY_WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <OutputFile>..\bin\fzsftp.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+    <Manifest>
+      <AdditionalManifestFiles>windows/windows_manifest.xml;%(AdditionalManifestFiles)</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_WINDOWS;NO_GSSAPI;SECURITY_WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>..\bin\fzsftp.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="be_none.c" />
+    <ClCompile Include="callback.c" />
+    <ClCompile Include="cmdline.c" />
+    <ClCompile Include="conf.c" />
+    <ClCompile Include="cproxy.c" />
+    <ClCompile Include="errsock.c" />
+    <ClCompile Include="fzprintf.c" />
+    <ClCompile Include="fzsftp.c" />
+    <ClCompile Include="import.c" />
+    <ClCompile Include="int64.c" />
+    <ClCompile Include="logging.c" />
+    <ClCompile Include="misc.c" />
+    <ClCompile Include="pinger.c" />
+    <ClCompile Include="portfwd.c" />
+    <ClCompile Include="pproxy.c" />
+    <ClCompile Include="proxy.c" />
+    <ClCompile Include="psftp.c" />
+    <ClCompile Include="settings.c" />
+    <ClCompile Include="sftp.c" />
+    <ClCompile Include="ssh.c" />
+    <ClCompile Include="sshaes.c" />
+    <ClCompile Include="ssharcf.c" />
+    <ClCompile Include="sshblowf.c" />
+    <ClCompile Include="sshbn.c" />
+    <ClCompile Include="sshcrc.c" />
+    <ClCompile Include="sshcrcda.c" />
+    <ClCompile Include="sshdes.c" />
+    <ClCompile Include="sshdh.c" />
+    <ClCompile Include="sshdss.c" />
+    <ClCompile Include="sshecc.c" />
+    <ClCompile Include="sshmd5.c" />
+    <ClCompile Include="sshpubk.c" />
+    <ClCompile Include="sshrand.c" />
+    <ClCompile Include="sshrsa.c" />
+    <ClCompile Include="sshsh256.c" />
+    <ClCompile Include="sshsh512.c" />
+    <ClCompile Include="sshsha.c" />
+    <ClCompile Include="sshshare.c" />
+    <ClCompile Include="sshzlib.c" />
+    <ClCompile Include="timing.c" />
+    <ClCompile Include="tree234.c" />
+    <ClCompile Include="version.c" />
+    <ClCompile Include="wildcard.c" />
+    <ClCompile Include="windows\wincons.c" />
+    <ClCompile Include="windows\windefs.c" />
+    <ClCompile Include="windows\winhandl.c" />
+    <ClCompile Include="windows\winhsock.c" />
+    <ClCompile Include="windows\winmisc.c" />
+    <ClCompile Include="windows\winnet.c" />
+    <ClCompile Include="windows\winnoise.c" />
+    <ClCompile Include="windows\winnpc.c" />
+    <ClCompile Include="windows\winnps.c" />
+    <ClCompile Include="windows\winpgntc.c" />
+    <ClCompile Include="windows\winsecur.c" />
+    <ClCompile Include="windows\winsftp.c" />
+    <ClCompile Include="windows\winshare.c" />
+    <ClCompile Include="windows\winstore.c" />
+    <ClCompile Include="windows\wintime.c" />
+    <ClCompile Include="x11fwd.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fzprintf.h" />
+    <ClInclude Include="fzsftp.h" />
+    <ClInclude Include="int64.h" />
+    <ClInclude Include="misc.h" />
+    <ClInclude Include="network.h" />
+    <ClInclude Include="proxy.h" />
+    <ClInclude Include="psftp.h" />
+    <ClInclude Include="putty.h" />
+    <ClInclude Include="puttymem.h" />
+    <ClInclude Include="puttyps.h" />
+    <ClInclude Include="sftp.h" />
+    <ClInclude Include="ssh.h" />
+    <ClInclude Include="storage.h" />
+    <ClInclude Include="tree234.h" />
+    <ClInclude Include="windows\rcstuff.h" />
+    <ClInclude Include="windows\winsecur.h" />
+    <ClInclude Include="windows\winstuff.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="windows\pscp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="windows\psftp.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="windows\version.rc2" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

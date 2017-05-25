@@ -1,0 +1,74 @@
+<FileZillaServer>
+    <Settings>
+        <Item name="Admin port" type="numeric">14147</Item>
+    </Settings>
+    <Groups />
+    <Users>
+        <User Name="ykx">
+            <Option Name="Pass"></Option>
+            <Option Name="Salt"></Option>
+            <Option Name="Group"></Option>
+            <Option Name="Bypass server userlimit">0</Option>
+            <Option Name="User Limit">0</Option>
+            <Option Name="IP Limit">0</Option>
+            <Option Name="Enabled">1</Option>
+            <Option Name="Comments"></Option>
+            <Option Name="ForceSsl">0</Option>
+            <IpFilter>
+                <Disallowed />
+                <Allowed />
+            </IpFilter>
+            <Permissions>
+                <Permission Dir="E:\softwareBackups">
+                    <Option Name="FileRead">1</Option>
+                    <Option Name="FileWrite">0</Option>
+                    <Option Name="FileDelete">0</Option>
+                    <Option Name="FileAppend">0</Option>
+                    <Option Name="DirCreate">0</Option>
+                    <Option Name="DirDelete">0</Option>
+                    <Option Name="DirList">1</Option>
+                    <Option Name="DirSubdirs">1</Option>
+                    <Option Name="IsHome">1</Option>
+                    <Option Name="AutoCreate">0</Option>
+                </Permission>
+            </Permissions>
+            <SpeedLimits DlType="0" DlLimit="10" ServerDlLimitBypass="0" UlType="0" UlLimit="10" ServerUlLimitBypass="0">
+                <Download />
+                <Upload />
+            </SpeedLimits>
+        </User>
+        <User Name="zhangyl">
+            <Option Name="Pass"></Option>
+            <Option Name="Salt"></Option>
+            <Option Name="Group"></Option>
+            <Option Name="Bypass server userlimit">0</Option>
+            <Option Name="User Limit">0</Option>
+            <Option Name="IP Limit">0</Option>
+            <Option Name="Enabled">1</Option>
+            <Option Name="Comments"></Option>
+            <Option Name="ForceSsl">0</Option>
+            <IpFilter>
+                <Disallowed />
+                <Allowed />
+            </IpFilter>
+            <Permissions>
+                <Permission Dir="F:">
+                    <Option Name="FileRead">1</Option>
+                    <Option Name="FileWrite">0</Option>
+                    <Option Name="FileDelete">0</Option>
+                    <Option Name="FileAppend">0</Option>
+                    <Option Name="DirCreate">0</Option>
+                    <Option Name="DirDelete">0</Option>
+                    <Option Name="DirList">1</Option>
+                    <Option Name="DirSubdirs">1</Option>
+                    <Option Name="IsHome">1</Option>
+                    <Option Name="AutoCreate">0</Option>
+                </Permission>
+            </Permissions>
+            <SpeedLimits DlType="0" DlLimit="10" ServerDlLimitBypass="0" UlType="0" UlLimit="10" ServerUlLimitBypass="0">
+                <Download />
+                <Upload />
+            </SpeedLimits>
+        </User>
+    </Users>
+</FileZillaServer>

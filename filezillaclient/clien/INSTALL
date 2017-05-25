@@ -1,0 +1,42 @@
+-------------------------
+Installation instructions
+-------------------------
+
+1. Requirements
+---------------
+
+FileZilla depends on the following libraries:
+- wxWidgets 3.0.2 or greater
+- libidn (only if not on Windows and not having gettaddrinfo with AI_IDN support)
+- GnuTLS 3.1.12 or greater
+- libdbus on *nix
+- sqlite3 3.7 or greater
+
+To compile FileZilla 3, the following tools need to be installed:
+- GCC
+- GNU make
+- GNU gettext
+
+Optional tools:
+- recent automake, autoconf if you plan to change configure.in or any of the
+  Makefile.am files
+- CppUnit if you want to run the tests
+- NSIS if you want to create the Windows installer
+
+If crosscompiling, a native wxrc tool, which is part of wxWidgets, has to
+exist or compilation will fail
+
+2. Compilation
+--------------
+
+If using source from the project's Subversion repository,
+execute autoreconf -i first to generate configure. This step is
+not necessary for source distributions.
+
+Assuming you are in the top source directory, execute the following commands:
+
+mkdir compile
+cd compile
+../configure
+make
+make install

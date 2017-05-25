@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{57362620-37EB-48E4-B87D-76B6F7FAA5BE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>filezillaserverinterface</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>../thirdinclude/;../thirdinclude/zlib-1.2.10/;$(IncludePath)</IncludePath>
+    <LibraryPath>../thirdlib/;$(LibraryPath)</LibraryPath>
+    <OutDir>../bin/</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../interface/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Accounts.cpp" />
+    <ClCompile Include="..\AdminListenSocket.cpp" />
+    <ClCompile Include="..\AsyncSocketEx.cpp" />
+    <ClCompile Include="..\AsyncSocketExLayer.cpp" />
+    <ClCompile Include="..\AsyncSslSocketLayer.cpp" />
+    <ClCompile Include="..\autobanmanager.cpp" />
+    <ClCompile Include="..\conversion.cpp" />
+    <ClCompile Include="..\ExternalIpCheck.cpp" />
+    <ClCompile Include="..\hash_thread.cpp" />
+    <ClCompile Include="..\interface\AdminSocket.cpp" />
+    <ClCompile Include="..\interface\ConnectDialog.cpp" />
+    <ClCompile Include="..\interface\DeleteGroupInUseDlg.cpp" />
+    <ClCompile Include="..\interface\EnterSomething.cpp" />
+    <ClCompile Include="..\interface\FileZilla server.cpp" />
+    <ClCompile Include="..\interface\GenerateCertificateDlg.cpp" />
+    <ClCompile Include="..\interface\GroupsDlg.cpp" />
+    <ClCompile Include="..\interface\GroupsDlgGeneral.cpp" />
+    <ClCompile Include="..\interface\GroupsDlgIpFilter.cpp" />
+    <ClCompile Include="..\interface\GroupsDlgSharedFolders.cpp" />
+    <ClCompile Include="..\interface\GroupsDlgSpeedLimit.cpp" />
+    <ClCompile Include="..\interface\MainFrm.cpp" />
+    <ClCompile Include="..\interface\misc\BrowseForFolder.cpp" />
+    <ClCompile Include="..\interface\misc\HyperLink.cpp" />
+    <ClCompile Include="..\interface\misc\Led.cpp" />
+    <ClCompile Include="..\interface\misc\SAPrefsDialog.cpp" />
+    <ClCompile Include="..\interface\misc\SAPrefsStatic.cpp" />
+    <ClCompile Include="..\interface\misc\SAPrefsSubDlg.cpp" />
+    <ClCompile Include="..\interface\misc\SBDestination.cpp" />
+    <ClCompile Include="..\interface\misc\SystemTray.cpp" />
+    <ClCompile Include="..\interface\NewUserDlg.cpp" />
+    <ClCompile Include="..\interface\OfflineAskDlg.cpp" />
+    <ClCompile Include="..\interface\Options.cpp" />
+    <ClCompile Include="..\interface\OptionsAdminInterfacePage.cpp" />
+    <ClCompile Include="..\interface\OptionsAutobanPage.cpp" />
+    <ClCompile Include="..\interface\OptionsCompressionPage.cpp" />
+    <ClCompile Include="..\interface\OptionsDlg.cpp" />
+    <ClCompile Include="..\interface\OptionsGeneralIpbindingsPage.cpp" />
+    <ClCompile Include="..\interface\OptionsGeneralPage.cpp" />
+    <ClCompile Include="..\interface\OptionsGeneralWelcomemessagePage.cpp" />
+    <ClCompile Include="..\interface\OptionsIpFilterPage.cpp" />
+    <ClCompile Include="..\interface\OptionsLoggingPage.cpp" />
+    <ClCompile Include="..\interface\OptionsMiscPage.cpp" />
+    <ClCompile Include="..\interface\OptionsPage.cpp" />
+    <ClCompile Include="..\interface\OptionsPasvPage.cpp" />
+    <ClCompile Include="..\interface\OptionsSecurityPage.cpp" />
+    <ClCompile Include="..\interface\OptionsSpeedLimitPage.cpp" />
+    <ClCompile Include="..\interface\OptionsSslPage.cpp" />
+    <ClCompile Include="..\interface\OutputFormat.cpp" />
+    <ClCompile Include="..\interface\SpeedLimitRuleDlg.cpp" />
+    <ClCompile Include="..\interface\splitex.cpp" />
+    <ClCompile Include="..\interface\StatusCtrl.cpp" />
+    <ClCompile Include="..\interface\StatusView.cpp" />
+    <ClCompile Include="..\interface\StdAfx.cpp" />
+    <ClCompile Include="..\interface\UsersDlg.cpp" />
+    <ClCompile Include="..\interface\UsersDlgGeneral.cpp" />
+    <ClCompile Include="..\interface\UsersDlgIpFilter.cpp" />
+    <ClCompile Include="..\interface\UsersDlgSharedFolders.cpp" />
+    <ClCompile Include="..\interface\UsersDlgSpeedLimit.cpp" />
+    <ClCompile Include="..\interface\UsersListCtrl.cpp" />
+    <ClCompile Include="..\interface\UsersView.cpp" />
+    <ClCompile Include="..\iputils.cpp" />
+    <ClCompile Include="..\misc\dll.cpp" />
+    <ClCompile Include="..\misc\md5.cpp" />
+    <ClCompile Include="..\pasv_port_randomizer.cpp" />
+    <ClCompile Include="..\SpeedLimit.cpp" />
+    <ClCompile Include="..\Thread.cpp" />
+    <ClCompile Include="..\tinyxml\tinystr.cpp" />
+    <ClCompile Include="..\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="..\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="..\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="..\version.cpp" />
+    <ClCompile Include="..\xml_utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Accounts.h" />
+    <ClInclude Include="..\AdminListenSocket.h" />
+    <ClInclude Include="..\AsyncSocketEx.h" />
+    <ClInclude Include="..\AsyncSocketExLayer.h" />
+    <ClInclude Include="..\AsyncSslSocketLayer.h" />
+    <ClInclude Include="..\autobanmanager.h" />
+    <ClInclude Include="..\config.h" />
+    <ClInclude Include="..\conversion.h" />
+    <ClInclude Include="..\defs.h" />
+    <ClInclude Include="..\ExternalIpCheck.h" />
+    <ClInclude Include="..\hash_thread.h" />
+    <ClInclude Include="..\interface\AdminSocket.h" />
+    <ClInclude Include="..\interface\ConnectDialog.h" />
+    <ClInclude Include="..\interface\DeleteGroupInUseDlg.h" />
+    <ClInclude Include="..\interface\EnterSomething.h" />
+    <ClInclude Include="..\interface\FileZilla server.h" />
+    <ClInclude Include="..\interface\GenerateCertificateDlg.h" />
+    <ClInclude Include="..\interface\GroupsDlg.h" />
+    <ClInclude Include="..\interface\GroupsDlgGeneral.h" />
+    <ClInclude Include="..\interface\GroupsDlgIpFilter.h" />
+    <ClInclude Include="..\interface\GroupsDlgSharedFolders.h" />
+    <ClInclude Include="..\interface\GroupsDlgSpeedLimit.h" />
+    <ClInclude Include="..\interface\MainFrm.h" />
+    <ClInclude Include="..\interface\misc\BrowseForFolder.h" />
+    <ClInclude Include="..\interface\misc\hyperlink.h" />
+    <ClInclude Include="..\interface\misc\Led.h" />
+    <ClInclude Include="..\interface\misc\SAPrefsDialog.h" />
+    <ClInclude Include="..\interface\misc\SAPrefsStatic.h" />
+    <ClInclude Include="..\interface\misc\SAPrefsSubDlg.h" />
+    <ClInclude Include="..\interface\misc\SBDestination.h" />
+    <ClInclude Include="..\interface\misc\SystemTray.h" />
+    <ClInclude Include="..\interface\NewUserDlg.h" />
+    <ClInclude Include="..\interface\OfflineAskDlg.h" />
+    <ClInclude Include="..\interface\Options.h" />
+    <ClInclude Include="..\interface\OptionsAdminInterfacePage.h" />
+    <ClInclude Include="..\interface\OptionsAutobanPage.h" />
+    <ClInclude Include="..\interface\OptionsCompressionPage.h" />
+    <ClInclude Include="..\interface\OptionsDlg.h" />
+    <ClInclude Include="..\interface\OptionsGeneralIpbindingsPage.h" />
+    <ClInclude Include="..\interface\OptionsGeneralPage.h" />
+    <ClInclude Include="..\interface\OptionsGeneralWelcomemessagePage.h" />
+    <ClInclude Include="..\interface\OptionsIpFilterPage.h" />
+    <ClInclude Include="..\interface\OptionsLoggingPage.h" />
+    <ClInclude Include="..\interface\OptionsMiscPage.h" />
+    <ClInclude Include="..\interface\OptionsPage.h" />
+    <ClInclude Include="..\interface\OptionsPasvPage.h" />
+    <ClInclude Include="..\interface\OptionsSecurityPage.h" />
+    <ClInclude Include="..\interface\OptionsSpeedLimitPage.h" />
+    <ClInclude Include="..\interface\OptionsSslPage.h" />
+    <ClInclude Include="..\interface\OutputFormat.h" />
+    <ClInclude Include="..\interface\resource.h" />
+    <ClInclude Include="..\interface\SpeedLimitRuleDlg.h" />
+    <ClInclude Include="..\interface\splitex.h" />
+    <ClInclude Include="..\interface\StatusCtrl.h" />
+    <ClInclude Include="..\interface\StatusView.h" />
+    <ClInclude Include="..\interface\StdAfx.h" />
+    <ClInclude Include="..\interface\UsersDlg.h" />
+    <ClInclude Include="..\interface\UsersDlgGeneral.h" />
+    <ClInclude Include="..\interface\UsersDlgIpFilter.h" />
+    <ClInclude Include="..\interface\UsersDlgSharedFolders.h" />
+    <ClInclude Include="..\interface\UsersDlgSpeedLimit.h" />
+    <ClInclude Include="..\interface\UsersListCtrl.h" />
+    <ClInclude Include="..\interface\UsersView.h" />
+    <ClInclude Include="..\iputils.h" />
+    <ClInclude Include="..\MFC64bitFix.h" />
+    <ClInclude Include="..\misc\dll.h" />
+    <ClInclude Include="..\misc\md5.h" />
+    <ClInclude Include="..\misc\StdString.h" />
+    <ClInclude Include="..\OptionLimits.h" />
+    <ClInclude Include="..\OptionTypes.h" />
+    <ClInclude Include="..\pasv_port_randomizer.h" />
+    <ClInclude Include="..\platform.h" />
+    <ClInclude Include="..\SpeedLimit.h" />
+    <ClInclude Include="..\Thread.h" />
+    <ClInclude Include="..\tinyxml\tinystr.h" />
+    <ClInclude Include="..\tinyxml\tinyxml.h" />
+    <ClInclude Include="..\version.h" />
+    <ClInclude Include="..\xml_utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Dependencies.props.example" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\interface\FileZilla server.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\interface\res\certificate.ico" />
+    <Image Include="..\interface\res\donate.bmp" />
+    <Image Include="..\interface\res\down.ico" />
+    <Image Include="..\interface\res\empty.ico" />
+    <Image Include="..\interface\res\FileZilla server.ico" />
+    <Image Include="..\interface\res\green.ico" />
+    <Image Include="..\interface\res\home.ico" />
+    <Image Include="..\interface\res\leds.bmp" />
+    <Image Include="..\interface\res\red.ico" />
+    <Image Include="..\interface\res\Toolbar.bmp" />
+    <Image Include="..\interface\res\transfer_modes.bmp" />
+    <Image Include="..\interface\res\unknown.ico" />
+    <Image Include="..\interface\res\up.ico" />
+    <Image Include="..\interface\res\userlisttoolbar.bmp" />
+    <Image Include="..\interface\res\yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\interface\res\manifest.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

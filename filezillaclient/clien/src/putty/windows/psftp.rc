@@ -1,0 +1,13 @@
+#include "rcstuff.h"
+
+#define APPNAME "FZSFTP"
+#define APPDESC "SFTP module for FileZilla based on PuTTY's psftp component"
+
+200 ICON "pscp.ico"
+
+#include "version.rc2"
+
+#ifdef GNU_WINDRES
+1 24 "windows_manifest.xml"
+#endif
+
